@@ -11,7 +11,7 @@ namespace Lab10
         static void Main(string[] args)
         {
             MyClass first = new MyClass();
-            first.Gradus = 13;
+            first.Gradus = 23;
             first.ToRadians();
             Console.ReadKey();
 
@@ -33,24 +33,59 @@ namespace Lab10
         {
             set
             {
-                if (value % 1 ==0)
+                if (value > 0 && value < 361)
                 {
                     gradus = value;
                 }
                 else
                 {
-                    Console.WriteLine("Значение должно быть целым");
+                    Console.WriteLine("Значение должно быть от 0 до 360");
                 }
             }
             get
             {
                 return gradus;
             }
+        }
+        public int Min
+        {
+            set
+            {
+                if (value > 0 && value < 61)
+                {
+                    gradus = value;
+                }
+                else
+                {
+                    Console.WriteLine("Значение должно быть от 0 до 60");
+                }
             }
-
+            get
+            {
+                return min;
+            }
+        }
+        public int Sec
+        {
+            set
+            {
+                if (value > 0 && value < 61)
+                {
+                    gradus = value;
+                }
+                else
+                {
+                    Console.WriteLine("Значение должно быть от 0 до 60");
+                }
+            }
+            get
+            {
+                return sec;
+            }
+        }
         public void ToRadians()
         {
-            Console.WriteLine(result = gradus*(Math.PI/180) + min * (Math.PI / (180*60)) + sec * (Math.PI / (180*60*60)));
+            Console.WriteLine(gradus * (Math.PI / 180) + min * (Math.PI / (180 * 60)) + sec * (Math.PI / (180 * 60 * 60)));
         }
     }
 }
