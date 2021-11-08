@@ -53,7 +53,7 @@ namespace Lab10
             {
                 if (value > 0 && value < 61)
                 {
-                    gradus = value;
+                    min = value;
                 }
                 else
                 {
@@ -71,7 +71,7 @@ namespace Lab10
             {
                 if (value > 0 && value < 61)
                 {
-                    gradus = value;
+                    sec = value;
                 }
                 else
                 {
